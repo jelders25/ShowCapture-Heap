@@ -14,7 +14,7 @@
         var imageBox = function() {
             var CSImgBox = document.createElement('img');
             CSImgBox.className = 'CSSShowCaptureImg';
-            CSImgBox.src = '/Users/jack.elders/Desktop/SC tools/ShowCapture Heap/HeapLogo.png';
+            CSImgBox.src = 'HeapLogo.png';
             document.querySelector('#CSShowCapture').appendChild(CSImgBox);
         }
         imageBox();
@@ -29,7 +29,7 @@
             var link = document.createElement('link');
             link.type = 'text/css';
             link.rel = 'stylesheet';
-            link.href = 'https://www.employandrew.info/showCaptureStyle.css';
+            link.href = 'JackHeapStyles.css';
             head.appendChild(link);
         }
         addStyleSheet();
@@ -57,15 +57,13 @@
                 var subID = 'CSSubElement' + i;
                 if (typeof(elementsArray[i]) !== 'undefined') {
                     document.querySelector('#' + subID).innerHTML = elementsArray[i];
-                    if (elementsArray[i].indexOf('hover') !== -1) {
-                        document.querySelector('#' + subID).className ='CSHover';
+                    if (elementsArray[i].indexOf('change') !== -1) {
+                        document.querySelector('#' + subID).className ='CSChange';
                     } else if (elementsArray[i].indexOf('mouse') !== -1 || a.indexOf('click') !== -1)  {
                         document.querySelector('#' + subID).className = 'CSClick';
-                    } else if (elementsArray[i].indexOf('focus') !== -1)  {
-                        document.querySelector('#' + subID).className = 'CSFocus';
-                    } else {
-                        document.querySelector('#' + subID).className = 'CSScroll';
-                    }
+                    } else if (elementsArray[i].indexOf('submit') !== -1)  {
+                        document.querySelector('#' + subID).className = 'CSSubmit';
+                    } 
                 }
             }
         };
@@ -108,57 +106,10 @@
                 y: a.pageY,
                 target: getElementPath(jQuery(a.target))
             })
-        }), jQuery(document).bind("scroll", function(a) {
-            addEvent('scroll', {
-                x: jQuery(document).scrollLeft(),
-                y: jQuery(document).scrollTop()
-            })
-        }), jQuery(document).bind("mousedown", function(a) {
-            addEvent('mouseDown', {
-                x: a.pageX,
-                y: a.pageY,
-                target: getElementPath(jQuery(a.target))
-            })
-        }), jQuery(document).bind("mouseup", function(a) {
-            addEvent('mouseUp', {
-                x: a.pageX,
-                y: a.pageY,
-                target: getElementPath(jQuery(a.target))
-            })
-        }), jQuery("a").bind("mouseover", function(a) {
-            addEvent('hoverStart', {
-                x: a.pageX,
-                y: a.pageY,
-                target: getElementPath(jQuery(a.target))
-            })
-        }), jQuery("a").bind("mouseout", function(a) {
-            addEvent('hoverEnd', {
-                x: a.pageX,
-                y: a.pageY,
-                target: getElementPath(jQuery(a.target))
-            })
-        }), jQuery('input[type="text"], textarea').bind("keypress", function(a) {
-            addEvent('keyPress', {
-                target: getElementPath(jQuery(a.target)),
-                value: jQuery(a.target).val()
-            })
-        }), jQuery('input[type="text"], textarea').bind("keyup", function(a) {
-            addEvent('keyUp', {
-                target: getElementPath(jQuery(a.target)),
-                value: jQuery(a.target).val()
-            })
         }), jQuery(":input, textarea").bind("change", function(a) {
             "password" != a.target.type && addEvent('change', {
                 target: getElementPath(jQuery(a.target)),
                 value: jQuery(a.target).val()
-            })
-        }), jQuery("input, select, textarea").bind("focus", function(a) {
-            addEvent('focus', {
-                target: getElementPath(jQuery(a.target))
-            })
-        }), jQuery("input, select, textarea").bind("blur", function(a) {
-            addEvent('blur', {
-                target: getElementPath(jQuery(a.target))
             })
         }), jQuery("form").bind("submit", function(a) {
             addEvent('submit', {
@@ -170,7 +121,7 @@
         listener()
     } else {
         var addjQuery = document.createElement('script');
-        addjQuery.id = 'andrewsJQ';
+        addjQuery.id = 'jacksJQ';
         addjQuery.src = 'https://code.jquery.com/jquery-3.1.1.min.js';
         document.head.appendChild(addjQuery);
         var timer = window.setInterval(function() {

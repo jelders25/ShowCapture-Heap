@@ -1,14 +1,14 @@
 .CSShowCapture {
 	position: fixed;
 	width:80%;
-    left: 40px;
+
     bottom: 40px;
     height: 150px;
     background-color: #18175f;
     z-index: 1000000000;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     border-radius: 3px;
-    padding: 10px 10px 10px 50px !important;
+    padding: 1px 1px 50px 10px; 
     color: white !important;
     font-size: 14px;
     font-weight: 400;
@@ -17,12 +17,12 @@
     overflow: hidden;
     text-align: left;
 }
+
 .CSSShowCaptureImg {
-	width: 90px;
+    width: 60px;
     height: auto;
-    left: -40px;
-    position: relative;
-    padding-bottom: 5px;
+    margin-right: 10px; /* Adjust space between image and text */
+    align-self: start; /* Align the image to the top if needed */
 }
 #CSClose {
   position: absolute;
@@ -41,16 +41,14 @@
   display: inline-block;
   content: "\00d7"; /* This will render the 'X' */
 }
-.CSHover {
-	color: #febf3c;;
-}
+
 .CSClick {
-	color : #fe4a66;;
+	color : white;
 }
-.CSScroll {
-	color: white;
+.CSChange {
+	color : yellow;
 }
-.CSFocus {
-	color: pink;
+.CSSubmit {
+	color : green;
 }
          
