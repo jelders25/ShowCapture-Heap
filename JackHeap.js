@@ -14,7 +14,7 @@
         var imageBox = function() {
             var CSImgBox = document.createElement('img');
             CSImgBox.className = 'CSSShowCaptureImg';
-            CSImgBox.src = 'https://jelders25.github.io/HeapLogo.png';
+            CSImgBox.src = 'HeapLogo.png';
             document.querySelector('#CSShowCapture').appendChild(CSImgBox);
         }
         imageBox();
@@ -29,7 +29,7 @@
             var link = document.createElement('link');
             link.type = 'text/css';
             link.rel = 'stylesheet';
-            link.href = 'https://jelders25.github.io/JackHeapStyles.css';
+            link.href = 'JackHeapStyles.css';
             head.appendChild(link);
         }
         addStyleSheet();
