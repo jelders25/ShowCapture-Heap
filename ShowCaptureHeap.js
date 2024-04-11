@@ -1,0 +1,1 @@
+javascript:(function() {var addCapture = document.createElement('script');addCapture.id = 'andrewsCapture';addCapture.src = 'ShowCaptureHeap.js';document.head.appendChild(addCapture);})();
