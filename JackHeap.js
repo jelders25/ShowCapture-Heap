@@ -14,7 +14,7 @@
         var imageBox = function() {
             var CSImgBox = document.createElement('img');
             CSImgBox.className = 'CSSShowCaptureImg';
-            CSImgBox.src = 'https://employandrew.info/cs-logo-640x146.png';
+            CSImgBox.src = '/Users/jack.elders/Desktop/SC tools/ShowCapture Heap/HeapLogo.png';
             document.querySelector('#CSShowCapture').appendChild(CSImgBox);
         }
         imageBox();
