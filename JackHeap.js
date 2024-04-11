@@ -14,8 +14,7 @@
         var imageBox = function() {
             var CSImgBox = document.createElement('img');
             CSImgBox.className = 'CSSShowCaptureImg';
-            CSImgBox.src = 'https://jelders25.github.io/ShowCapture-Heap
-/JackHeap.js/HeapLogo.png';
+            CSImgBox.src = 'https://jelders25.github.io/ShowCapture-Heap/HeapLogo.png';
             document.querySelector('#CSShowCapture').appendChild(CSImgBox);
         }
         imageBox();
