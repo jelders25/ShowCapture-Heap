@@ -3,7 +3,7 @@
 	width:80%;
 
     bottom: 40px;
-    height: 150px;
+    height: 200px;
     background-color: #18175f;
     z-index: 1000000000;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -21,7 +21,7 @@
 .CSSShowCaptureImg {
     width: 60px;
     height: auto;
-    margin-right: 10px; /* Adjust space between image and text */
+    margin-bottom: -10px; /* Adjust space between image and text */
     align-self: start; /* Align the image to the top if needed */
 }
 #CSClose {
